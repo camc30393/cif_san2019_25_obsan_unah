@@ -1,11 +1,6 @@
 # Dashboard Interactivo CIF-IAA Honduras 2019–2025
  
 <div align="center">
-![OBSAN-UNAH](https://img.shields.io/badge/OBSAN-UNAH-223A75?style=for-the-badge&labelColor=0C1E3A)
-![CIF](https://img.shields.io/badge/CIF--IAA-Honduras-E67800?style=for-the-badge&labelColor=1a1a1a)
-![Versión](https://img.shields.io/badge/versión-1.1-FDBA13?style=for-the-badge&labelColor=223A75)
-![Licencia](https://img.shields.io/badge/licencia-MIT-85C6E4?style=for-the-badge)
- 
 **Observatorio en Seguridad Alimentaria y Nutricional**  
 Instituto de Investigaciones Sociales · Facultad de Ciencias Sociales  
 Universidad Nacional Autónoma de Honduras (UNAH)
