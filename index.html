@@ -295,16 +295,98 @@ main { padding: 24px 28px 40px; max-width: 1600px; margin: 0 auto; }
   background: var(--bg-surface-alt); border-left: 3px solid var(--unah-cyan);
   padding: 6px 10px; border-radius: 3px; font-size: 12px; color: var(--text-primary);
 }
+/* ============ FOOTER ESTILO OBSAN ============ */
 footer.app-footer {
-  margin-top: 40px; padding: 20px 28px; background: var(--bg-surface);
-  border-top: 2px solid var(--unah-blue); font-size: 11px;
-  color: var(--text-secondary); text-align: center;
+  margin-top: 56px;
+  padding: 56px clamp(20px, 4vw, 56px) 28px;
+  background: var(--unah-darkblue);
+  color: rgba(250,247,242,0.78);
+  font-size: 13px;
+  line-height: 1.6;
+  position: relative;
+  overflow: hidden;
 }
-[data-theme="dark"] footer.app-footer { border-top-color: var(--unah-cyan); }
-footer.app-footer strong { color: var(--text-primary); }
-footer.app-footer a { color: var(--unah-blue); text-decoration: none; }
-[data-theme="dark"] footer.app-footer a { color: var(--unah-cyan); }
-footer.app-footer a:hover { text-decoration: underline; }
+footer.app-footer::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(253,186,19,0.06), transparent 35%),
+    radial-gradient(circle at 88% 80%, rgba(27,174,199,0.07), transparent 40%);
+  pointer-events: none;
+}
+.footer-inner {
+  max-width: 1320px; margin: 0 auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: clamp(24px, 5vw, 64px);
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(250,247,242,0.10);
+}
+.footer-col h4 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FAF7F2;
+  margin: 0 0 16px;
+  letter-spacing: 0.005em;
+}
+.footer-col p {
+  margin: 0 0 12px;
+  color: rgba(250,247,242,0.78);
+}
+.footer-col p:last-child { margin-bottom: 0; }
+.footer-col strong {
+  color: #FAF7F2;
+  font-weight: 600;
+}
+.footer-col ul {
+  list-style: none; margin: 0; padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+.footer-col ul li a, .footer-col ul li {
+  color: rgba(250,247,242,0.78);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-col ul li a:hover {
+  color: var(--unah-gold);
+  text-decoration: underline;
+}
+.footer-col-team .team-name {
+  color: #FAF7F2;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.footer-col-team .team-role {
+  color: rgba(250,247,242,0.72);
+  margin-bottom: 12px;
+}
+.footer-bottom {
+  max-width: 1320px; margin: 0 auto;
+  position: relative;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 11.5px;
+  color: rgba(250,247,242,0.62);
+  letter-spacing: 0.02em;
+}
+.footer-bottom .footer-meta-right { color: rgba(250,247,242,0.62); }
+
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .footer-bottom { font-size: 10.5px; }
+}
 
 @media print {
   @page { size: letter; margin: 1.5cm; }
@@ -338,7 +420,26 @@ footer.app-footer a:hover { text-decoration: underline; }
   .heatmap-table td.cell, .map-poly, .legend-swatch, .fase-badge {
     print-color-adjust: exact; -webkit-print-color-adjust: exact;
   }
-  footer.app-footer { background: #FFFFFF !important; border-top: 1px solid #223A75; }
+  footer.app-footer {
+    background: #FFFFFF !important;
+    border-top: 1px solid #223A75;
+    color: #0C1E3A !important;
+    padding: 16px 0 !important;
+    margin-top: 24px !important;
+  }
+  footer.app-footer::before { display: none !important; }
+  .footer-inner {
+    grid-template-columns: 2fr 1fr 1fr !important;
+    gap: 18px !important;
+    padding-bottom: 12px !important;
+    border-bottom: 1px solid rgba(12,30,58,0.18) !important;
+  }
+  .footer-col h4, .footer-col strong, .footer-col-team .team-name { color: #0C1E3A !important; }
+  .footer-col, .footer-col p, .footer-col ul li, .footer-col ul li a, .footer-col-team .team-role,
+  .footer-bottom, .footer-bottom .footer-meta-right {
+    color: #3A4A66 !important;
+  }
+  .footer-bottom { padding-top: 10px !important; font-size: 9pt !important; }
 }
 </style>
 </head>
@@ -492,9 +593,33 @@ footer.app-footer a:hover { text-decoration: underline; }
 </main>
 
 <footer class="app-footer">
-  <p style="margin:0 0 4px"><strong>Observatorio en Seguridad Alimentaria y Nutricional (OBSAN)</strong> · Instituto de Investigaciones Sociales · Facultad de Ciencias Sociales · Universidad Nacional Autónoma de Honduras</p>
-  <p style="margin:0 0 4px">Elaborado por Christian Alexis Manzanares Cruz, Especialista en Sistemas de Información (ORCID: 0009-0004-7419-0449) · Generado el <span id="genDate"></span></p>
-  <p style="margin:0 0 4px">Fuente de datos: <em>obsan.unah.edu.hn/dashboard-san/insana</em>, derivada de los informes UTSAN-SAG · Marco metodológico: <a href="https://www.ipcinfo.org" target="_blank" rel="noopener">CIF v3.1 (IPC Global Partners, 2021)</a></p>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Observatorio en Seguridad Alimentaria y Nutricional</h4>
+      <p>Adscrito al Instituto de Investigaciones Sociales (IIS) de la Facultad de Ciencias Sociales (FCCSS) de la Universidad Nacional Autónoma de Honduras (UNAH).</p>
+      <p>El OBSAN tiene como propósito generar evidencia académica, investigación aplicada y análisis de información estratégica que aporte al debate público sobre seguridad alimentaria, desarrollo humano y políticas alimentarias en Honduras.</p>
+    </div>
+    <div class="footer-col footer-col-team">
+      <h4>Equipo</h4>
+      <p class="team-name">Christian Alexis Manzanares Cruz</p>
+      <p class="team-role">Especialista en Sistemas de Información — OBSAN<br><span style="font-size:11.5px;opacity:0.85">ORCID: 0009-0004-7419-0449</span></p>
+      <p style="margin:0">Tegucigalpa, M.D.C., Honduras</p>
+    </div>
+    <div class="footer-col">
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Volver al inicio del tablero</a></li>
+        <li><a href="https://obsan.unah.edu.hn" target="_blank" rel="noopener">OBSAN - UNAH</a></li>
+        <li><a href="https://www.ipcinfo.org" target="_blank" rel="noopener">IPC/CIF - Sistema global</a></li>
+        <li><a href="https://sag.gob.hn/" target="_blank" rel="noopener">UTSAN - Secretaría de Agricultura y Ganadería</a></li>
+        <li><a href="https://fews.net/es/latin-america-and-caribbean/honduras" target="_blank" rel="noopener">FEWS NET - Honduras</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>OBSAN/IIS/FCCSS/UNAH · <span id="genYear"></span> — Boletín CIF-IAA Honduras 2019–2025 · v1.1</span>
+    <span class="footer-meta-right">Dashboard · Sin fines comerciales · Generado el <span id="genDate"></span></span>
+  </div>
 </footer>
 
 <script>
@@ -1034,6 +1159,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const isoDate = new Date().toISOString().slice(0,10);
   const metaEl = document.getElementById('genDateMeta');
   if (metaEl) metaEl.textContent = isoDate;
+  const yearEl = document.getElementById('genYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
   fillFilters();
   renderAll();
 
@@ -1060,4 +1187,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
