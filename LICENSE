@@ -1,6 +1,11 @@
 MIT License
 
-Copyright (c) 2026 camc30393
+Copyright (c) 2025 Observatorio en Seguridad Alimentaria y Nutricional (OBSAN)
+Instituto de Investigaciones Sociales (IIS) — Facultad de Ciencias Sociales
+Universidad Nacional Autónoma de Honduras (UNAH)
+
+Autor/Maintainer: Christian Alexis Manzanares Cruz (ORCID: 0009-0004-7419-0449)
+Especialista en Sistemas de Información — OBSAN-IIS-UNAH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +24,30 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+NOTA SOBRE LOS DATOS / DATA NOTE
+
+Los datos cuantitativos contenidos en este repositorio (series históricas CIF,
+población por fase, áreas geográficas) son derivados de los informes oficiales
+publicados por la Unidad Técnica de Seguridad Alimentaria y Nutricional (UTSAN)
+de la Secretaría de Agricultura y Ganadería (SAG) de Honduras, en el marco del
+Proceso Global de la Clasificación Integrada de la Seguridad Alimentaria en
+Fases (CIF / IPC).
+
+The quantitative data contained in this repository (CIF historical series,
+population by phase, geographic areas) are derived from official reports
+published by the Unidad Técnica de Seguridad Alimentaria y Nutricional (UTSAN)
+of the Secretaría de Agricultura y Ganadería (SAG) of Honduras, under the
+Integrated Food Security Phase Classification (IPC/CIF) Global Initiative.
+
+La codificación cromática oficial de las fases CIF (F1–F5) es propiedad del
+proceso IPC Global y se utiliza aquí con fines académicos e informativos,
+de conformidad con los lineamientos del Manual Técnico CIF v3.1.
+
+El uso de los datos derivados debe citar la fuente primaria:
+  UTSAN. (2025). Informe del análisis de inseguridad alimentaria aguda de la
+  CIF — Honduras, diciembre 2024 – noviembre 2025. SAG.
+
+Para consultas institucionales: obsan@unah.edu.hn
