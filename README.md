@@ -150,13 +150,7 @@ Universidad Nacional Autónoma de Honduras
 **Datos primarios:**  
 Unidad Técnica de Seguridad Alimentaria y Nutricional (UTSAN)  
 Secretaría de Agricultura y Ganadería (SAG) — Honduras
- 
----
- 
-## Aviso de validación científica
- 
-> Toda cifra publicada en este dashboard y boletín debe ser verificada y validada por el supervisor académico contra los informes originales UTSAN antes de su uso en documentos oficiales, declaraciones públicas o decisiones de política. El OBSAN-UNAH no se hace responsable por usos de los datos sin la debida validación institucional.
- 
+
 ---
  
 ## Licencia
